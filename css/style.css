@@ -1,0 +1,185 @@
+/*Global rules  */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-m: hsl(217, 54%, 11%);
+    --Very-dark-blue-c: hsl(216, 50%, 16%);
+    --Very-dark-blue-l: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue-m);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End rules */
+/* style card */
+.card {
+    width: 325px;
+    padding: 20px;
+    background-color: var(--Very-dark-blue-c);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto 30px;
+}
+.card .nft-image img {
+    width: 100%;
+    position: relative;
+    
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.card .nft-image {
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.card .nft-image::after {
+    content: "";
+    background-color: var(--Cyan);
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    z-index: -1;
+}
+.card .nft-image::before {
+    content: url(../images/icon-view.svg);
+    position: absolute;
+   
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50% );
+    -webkit-transform: translate(-50% , -50% );
+    -moz-transform: translate(-50% , -50% );
+    -ms-transform: translate(-50% , -50% );
+    -o-transform: translate(-50% , -50% );
+    z-index: -2;
+   
+}
+.container:hover .nft-image::after {
+    z-index: 1;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.container:hover .nft-image::before {
+    transition: 0.2s;
+    z-index: 2;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+   
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info h1 {
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+}
+.info h1:hover {
+    color: var(--Cyan);
+}
+.info p {
+    color: var(--Soft-blue);
+    font-size: 18px;
+    line-height: 1.6;
+}
+.price-info {
+    margin-bottom: 30px;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.price-info .info-1 span {
+    color: var(--Cyan);
+    vertical-align: top;
+    margin-left: 4px;
+}
+
+.price-info .time-info span {
+    color: var(--Soft-blue);
+    vertical-align: top;
+    margin-left: 4px;
+}
+hr {
+    border: 1px solid var(--Very-dark-blue-l);
+    margin-bottom: 10px;
+}
+.owner {
+    display: flex;
+    align-items: center;
+}
+
+.owner img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.owner p {
+    color: white;
+    vertical-align: top;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.owner p:hover {
+    color: var(--Cyan);
+}
+
+.owner p span {
+    color: var(--Soft-blue);
+    cursor: auto;
+}
+/* End card */
